@@ -57,9 +57,9 @@
           <a href="#issues" class="btn btn-ghost">See the issues ↓</a>
         </div>
         <div class="hero-stats">
-          <div><strong id="statVoters">0</strong><span>verified voters</span></div>
-          <div><strong id="statVotes">0</strong><span>votes cast</span></div>
-          <div><strong id="statWilayas">0</strong><span>wilayas active</span></div>
+          <div><strong id="statVotes">0</strong><span>votes this cycle</span></div>
+          <div><strong id="statVoters">0</strong><span>priorities proposed</span></div>
+          <div><strong id="statWilayas">0</strong><span>your active votes</span></div>
         </div>
       </div>
     </section>
@@ -123,6 +123,36 @@
         </div>
       </div>
 
+      <div id="roundBanner" class="round-banner">
+        <div class="rb-main">
+          <div class="rb-label">
+            🗳️ Voting cycle <strong id="rbNum">#1</strong> ·
+            when the counter hits <strong>zero</strong>, the top-voted issue is
+            <strong>proposed to the government</strong>
+          </div>
+          <div id="countdown" class="countdown" aria-live="polite" aria-label="Time left in voting cycle">
+            <span class="cd-seg"><b id="cdD">00</b><i>days</i></span>
+            <span class="cd-sep">:</span>
+            <span class="cd-seg"><b id="cdH">00</b><i>hrs</i></span>
+            <span class="cd-sep">:</span>
+            <span class="cd-seg"><b id="cdM">00</b><i>min</i></span>
+            <span class="cd-sep">:</span>
+            <span class="cd-seg"><b id="cdS">00</b><i>sec</i></span>
+          </div>
+        </div>
+        <div class="rb-meta">
+          <label class="field local-field">
+            <span>Cycle length</span>
+            <select id="cycleSelect" class="select small" aria-label="Voting cycle length">
+              <option value="3600000">Hourly</option>
+              <option value="86400000">Daily</option>
+              <option value="604800000">Weekly</option>
+            </select>
+          </label>
+          <span id="typicalTime" class="typical-chip">🕒 Peak voting time: gathering data</span>
+        </div>
+      </div>
+
       <div id="lockNotice" class="lock-notice">
         🔒 Verify your location above to unlock voting. You can still browse the issues.
       </div>
@@ -137,6 +167,12 @@
         <p class="muted">Live national ranking. This is the list a democratic government would act on, top first.</p>
       </div>
       <ol id="leaderboard" class="leaderboard"><!-- ranking injected --></ol>
+
+      <div class="proposals-wrap">
+        <h3 class="tier-label"><span>📜</span> Proposed to the government</h3>
+        <ol id="proposalsList" class="proposals-list"><!-- closed-cycle proposals injected --></ol>
+      </div>
+
       <div class="mandate-actions">
         <button id="submitBtn" class="btn btn-primary">📨 Generate the mandate report</button>
         <button id="resetBtn" class="btn btn-ghost subtle">Reset my votes</button>

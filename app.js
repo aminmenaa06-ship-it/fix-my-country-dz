@@ -6,37 +6,37 @@
 
 /* ---------- 1. The issues citizens can prioritise ---------- */
 const ISSUES = [
-  { id: 'water',     icon: '💧', cat: 'Water',        en: 'Reliable drinking water',        ar: 'ماء شروب دائم',        seed: 4120, trend: 38,
+  { id: 'water',     icon: '💧', cat: 'Water',        en: 'Reliable drinking water',        ar: 'ماء شروب دائم',
     desc: 'End the rationing and dry taps. Clean water in every home, every day of the week.' },
-  { id: 'power',     icon: '⚡', cat: 'Energy',       en: 'Stop the power cuts',            ar: 'إيقاف انقطاع الكهرباء', seed: 3380, trend: 25,
+  { id: 'power',     icon: '⚡', cat: 'Energy',       en: 'Stop the power cuts',            ar: 'إيقاف انقطاع الكهرباء',
     desc: 'Stable electricity through summer peaks — no more blackouts during heatwaves.' },
-  { id: 'jobs',      icon: '💼', cat: 'Jobs',         en: 'Jobs for young people',          ar: 'مناصب شغل للشباب',     seed: 5210, trend: 61,
+  { id: 'jobs',      icon: '💼', cat: 'Jobs',         en: 'Jobs for young people',          ar: 'مناصب شغل للشباب',
     desc: 'Real opportunities so graduates don\'t have to emigrate to build a future.' },
-  { id: 'health',    icon: '🏥', cat: 'Health',       en: 'Hospitals that work',            ar: 'مستشفيات تشتغل',       seed: 3990, trend: 44,
+  { id: 'health',    icon: '🏥', cat: 'Health',       en: 'Hospitals that work',            ar: 'مستشفيات تشتغل',
     desc: 'Shorter waits, stocked pharmacies, specialists you don\'t have to travel for.' },
-  { id: 'roads',     icon: '🛣️', cat: 'Infrastructure', en: 'Fix the roads',               ar: 'إصلاح الطرقات',        seed: 2870, trend: 19,
+  { id: 'roads',     icon: '🛣️', cat: 'Infrastructure', en: 'Fix the roads',               ar: 'إصلاح الطرقات',
     desc: 'Repair potholes and finish stalled road projects that cut towns off.' },
-  { id: 'housing',   icon: '🏠', cat: 'Housing',      en: 'Affordable housing',             ar: 'سكن في المتناول',      seed: 4480, trend: 47,
+  { id: 'housing',   icon: '🏠', cat: 'Housing',      en: 'Affordable housing',             ar: 'سكن في المتناول',
     desc: 'Clear the AADL waiting lists and make a first home reachable for families.' },
-  { id: 'internet',  icon: '📶', cat: 'Digital',      en: 'Fast, fair internet',            ar: 'إنترنت سريع وعادل',    seed: 3110, trend: 33,
+  { id: 'internet',  icon: '📶', cat: 'Digital',      en: 'Fast, fair internet',            ar: 'إنترنت سريع وعادل',
     desc: 'Real broadband speeds across wilayas, not just the big cities.' },
-  { id: 'corruption',icon: '⚖️', cat: 'Governance',   en: 'Tackle corruption',              ar: 'محاربة الفساد',        seed: 4760, trend: 52,
+  { id: 'corruption',icon: '⚖️', cat: 'Governance',   en: 'Tackle corruption',              ar: 'محاربة الفساد',
     desc: 'Transparent public spending and consequences for those who steal from the people.' },
-  { id: 'transport', icon: '🚌', cat: 'Transport',    en: 'Public transport',               ar: 'النقل العمومي',        seed: 1980, trend: 14,
+  { id: 'transport', icon: '🚌', cat: 'Transport',    en: 'Public transport',               ar: 'النقل العمومي',
     desc: 'More buses, trams and trains that run on time and reach the suburbs.' },
-  { id: 'schools',   icon: '🎓', cat: 'Education',    en: 'Better schools',                 ar: 'مدارس أفضل',           seed: 2640, trend: 22,
+  { id: 'schools',   icon: '🎓', cat: 'Education',    en: 'Better schools',                 ar: 'مدارس أفضل',
     desc: 'Less overcrowding, modern curricula and teachers who are properly paid.' },
-  { id: 'prices',    icon: '🛒', cat: 'Economy',      en: 'Control the cost of living',     ar: 'التحكم في الأسعار',    seed: 5040, trend: 58,
+  { id: 'prices',    icon: '🛒', cat: 'Economy',      en: 'Control the cost of living',     ar: 'التحكم في الأسعار',
     desc: 'Rein in food and staple prices so a salary covers the basics again.' },
-  { id: 'waste',     icon: '🗑️', cat: 'Environment',  en: 'Clean streets & waste',         ar: 'نظافة وتسيير النفايات', seed: 1720, trend: 11,
+  { id: 'waste',     icon: '🗑️', cat: 'Environment',  en: 'Clean streets & waste',         ar: 'نظافة وتسيير النفايات',
     desc: 'Regular collection, recycling and an end to illegal dumping sites.' },
-  { id: 'bureaucracy',icon: '📑', cat: 'Governance',  en: 'Cut the paperwork',              ar: 'تبسيط الإجراءات',      seed: 3550, trend: 36,
+  { id: 'bureaucracy',icon: '📑', cat: 'Governance',  en: 'Cut the paperwork',              ar: 'تبسيط الإجراءات',
     desc: 'Digitise administration so a simple document doesn\'t take ten trips and three stamps.' },
-  { id: 'pollution', icon: '🌫️', cat: 'Environment',  en: 'Clean air & water',             ar: 'هواء وماء نظيف',       seed: 1490, trend: 9,
+  { id: 'pollution', icon: '🌫️', cat: 'Environment',  en: 'Clean air & water',             ar: 'هواء وماء نظيف',
     desc: 'Protect rivers and coastlines and curb industrial pollution near towns.' },
-  { id: 'women',     icon: '🤝', cat: 'Society',      en: 'Safety & women\'s rights',       ar: 'الأمن وحقوق المرأة',  seed: 2310, trend: 29,
+  { id: 'women',     icon: '🤝', cat: 'Society',      en: 'Safety & women\'s rights',       ar: 'الأمن وحقوق المرأة',
     desc: 'Stronger protection against violence and equal opportunity in work and law.' },
-  { id: 'farming',   icon: '🌾', cat: 'Economy',      en: 'Support farmers & food security',ar: 'دعم الفلاحة والأمن الغذائي', seed: 2050, trend: 17,
+  { id: 'farming',   icon: '🌾', cat: 'Economy',      en: 'Support farmers & food security',ar: 'دعم الفلاحة والأمن الغذائي',
     desc: 'Back local agriculture so the country grows more of what it eats.' },
 ];
 
@@ -102,22 +102,39 @@ const WILAYAS = [
    (A prototype-level check — a production system would use a precise border polygon.) */
 const ALGERIA_BOUNDS = { north: 37.15, south: 18.90, west: -8.70, east: 12.05 };
 
-/* ---------- 3. State + persistence ---------- */
+/* ---------- 3. State + persistence ----------
+   v2 keys: no seeds, no fake data — everything starts at zero.
+   Votes are scoped to the current voting cycle and reset when it closes. */
 const LS = {
-  tally:   'ab_tally_v1',   // { issueId: extraVotes } added on top of seeds
-  mine:    'ab_mine_v1',    // [issueId, ...] issues this device backed
-  verify:  'ab_verify_v1',  // { status, label, ts }
+  votes:     'ab_votes_v2',     // { issueId: votes } this cycle
+  mine:      'ab_mine_v2',      // [issueId, ...] backed by this citizen this cycle
+  log:       'ab_log_v2',       // [{ t, id }] timestamp of every vote cast (this cycle)
+  hist:      'ab_hist_v2',      // [24] all-time histogram of vote hour-of-day
+  round:     'ab_round_v2',     // { num, start, lengthMs }
+  proposals: 'ab_proposals_v2', // [{ id, votes, total, round, date }] archive
+  verify:    'ab_verify_v1',    // { status, label, ts } — persists across cycles
 };
 const load = (k, fb) => { try { return JSON.parse(localStorage.getItem(k)) ?? fb; } catch { return fb; } };
 const save = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 
-let tally  = load(LS.tally, {});           // device-added votes per issue
-let mine   = new Set(load(LS.mine, []));   // issues this user backs
-let verify = load(LS.verify, null);        // verification record
+/* Voting-cycle lengths (ms) the citizens can run on */
+const CYCLES = { 3600000: 'Hourly', 86400000: 'Daily', 604800000: 'Weekly' };
+const DEFAULT_CYCLE = 604800000; // weekly
 
-const totalVotes = (id) => {
-  const issue = ISSUES.find(i => i.id === id);
-  return (issue ? issue.seed : 0) + (tally[id] || 0);
+let tally     = load(LS.votes, {});          // votes this cycle, per issue
+let mine      = new Set(load(LS.mine, []));   // issues this citizen backed this cycle
+let voteLog   = load(LS.log, []);            // timestamps of votes cast this cycle
+let hist      = load(LS.hist, new Array(24).fill(0)); // when people vote (all-time)
+let proposals = load(LS.proposals, []);       // priorities already proposed
+let verify    = load(LS.verify, null);
+let round     = load(LS.round, null);
+
+const totalVotes = (id) => tally[id] || 0;
+const cycleTotal = () => ISSUES.reduce((s, i) => s + totalVotes(i.id), 0);
+/* votes for an issue in the last 24h — the real, live "activity" signal */
+const velocity24h = (id) => {
+  const cut = Date.now() - 86400000;
+  return voteLog.reduce((n, v) => n + (v.id === id && v.t >= cut ? 1 : 0), 0);
 };
 
 /* ---------- 4. DOM helpers ---------- */
@@ -145,7 +162,7 @@ function renderIssues() {
 
   let list = ISSUES.filter(i => cat === 'all' || i.cat === cat);
   if (sort === 'votes')    list.sort((a, b) => totalVotes(b.id) - totalVotes(a.id));
-  if (sort === 'trending') list.sort((a, b) => b.trend - a.trend);
+  if (sort === 'trending') list.sort((a, b) => velocity24h(b.id) - velocity24h(a.id) || totalVotes(b.id) - totalVotes(a.id));
   if (sort === 'az')       list.sort((a, b) => a.en.localeCompare(b.en));
 
   const max = Math.max(...ISSUES.map(i => totalVotes(i.id)), 1);
@@ -156,6 +173,8 @@ function renderIssues() {
     const voted  = mine.has(i.id);
     const pct    = Math.round((votes / max) * 100);
     const m      = MINISTRIES[ISSUE_GOV[i.id]];
+    const vel    = velocity24h(i.id);
+    const act    = vel > 0 ? `🔥 ${vel} in 24h` : '🆕 awaiting votes';
     return `
       <article class="issue-card ${voted ? 'voted' : ''} ${unlocked ? '' : 'locked'}" data-id="${i.id}">
         <div class="issue-top">
@@ -171,7 +190,7 @@ function renderIssues() {
           <div class="meter-bar"><div class="meter-fill" style="width:${pct}%"></div></div>
           <div class="meter-row">
             <span><strong data-count>${votes.toLocaleString()}</strong> votes</span>
-            <span>🔥 ${i.trend}% this month</span>
+            <span>${act}</span>
           </div>
         </div>
         <a class="issue-gov" href="https://${m.web}" target="_blank" rel="noopener"
@@ -189,19 +208,28 @@ function toggleVote(id) {
 
   if (mine.has(id)) {
     mine.delete(id);
-    tally[id] = (tally[id] || 0) - 1;
+    tally[id] = Math.max(0, (tally[id] || 0) - 1);
+    // remove the most recent matching cast from the cycle log
+    for (let k = voteLog.length - 1; k >= 0; k--) { if (voteLog[k].id === id) { voteLog.splice(k, 1); break; } }
   } else {
     mine.add(id);
     tally[id] = (tally[id] || 0) + 1;
+    const t = Date.now();
+    voteLog.push({ t, id });
+    if (voteLog.length > 1000) voteLog = voteLog.slice(-1000);
+    hist[new Date(t).getHours()]++;     // remember when citizens typically vote
+    save(LS.hist, hist);
     toast('✅ Vote counted — شكراً');
   }
   save(LS.mine, [...mine]);
-  save(LS.tally, tally);
+  save(LS.votes, tally);
+  save(LS.log, voteLog);
 
   renderIssues();
   renderLeaderboard();
   renderStats();
   renderTopRoute();
+  renderTypicalTime();
 
   // little pop on the count just changed
   const el = $(`.issue-card[data-id="${id}"] [data-count]`);
@@ -228,30 +256,121 @@ function renderLeaderboard() {
   $$('#leaderboard .lb-rank').forEach((el, idx) => (el.textContent = idx + 1));
 }
 
-/* ---------- 8. Stats ---------- */
+/* ---------- 8. Stats (all real, no baselines) ---------- */
 function renderStats() {
-  const totVotes = ISSUES.reduce((s, i) => s + totalVotes(i.id), 0);
-  // Simulated participation baseline + this device's contribution
-  const baseVoters  = 9430;
-  const baseWilayas = 41;
-  const myCount = mine.size > 0 ? 1 : 0;
-  const myWilaya = (verify && verify.label) ? 1 : 0;
-
-  animateNumber($('#statVoters'),  baseVoters + myCount);
-  animateNumber($('#statVotes'),   totVotes);
-  animateNumber($('#statWilayas'), Math.min(58, baseWilayas + myWilaya));
+  animateNumber($('#statVotes'),   cycleTotal());      // votes this cycle
+  animateNumber($('#statVoters'),  proposals.length);  // priorities proposed
+  animateNumber($('#statWilayas'), mine.size);         // your active votes
 }
 
 function animateNumber(el, target) {
+  if (!el) return;
   const start = parseInt((el.textContent || '0').replace(/,/g, ''), 10) || 0;
+  if (start === target) { el.textContent = target.toLocaleString(); return; }
   const dur = 600, t0 = performance.now();
+  let done = false;
   function step(now) {
     const p = Math.min(1, (now - t0) / dur);
     const val = Math.round(start + (target - start) * (1 - Math.pow(1 - p, 3)));
     el.textContent = val.toLocaleString();
-    if (p < 1) requestAnimationFrame(step);
+    if (p < 1) requestAnimationFrame(step); else done = true;
   }
   requestAnimationFrame(step);
+  // safety net: guarantee the true value even if rAF is throttled (background tab)
+  setTimeout(() => { if (!done) el.textContent = target.toLocaleString(); }, dur + 80);
+}
+
+/* ---------- 8a. Voting cycle + countdown + proposals ---------- */
+function ensureRound() {
+  if (!round || typeof round.start !== 'number') {
+    round = { num: 1, start: Date.now(), lengthMs: DEFAULT_CYCLE };
+    save(LS.round, round);
+  }
+}
+
+const roundRemaining = () => round.start + round.lengthMs - Date.now();
+const seg = (n) => String(Math.max(0, Math.floor(n))).padStart(2, '0');
+
+/* Live ticker — updates the counter every second and closes the cycle at zero */
+function tickRound() {
+  let rem = roundRemaining();
+  if (rem <= 0) { endRound(); rem = roundRemaining(); }
+  const D = $('#cdD'), H = $('#cdH'), M = $('#cdM'), S = $('#cdS');
+  if (!D) return;
+  D.textContent = seg(rem / 86400000);
+  H.textContent = seg((rem % 86400000) / 3600000);
+  M.textContent = seg((rem % 3600000) / 60000);
+  S.textContent = seg((rem % 60000) / 1000);
+}
+
+/* Cycle closes → the people's #1 priority is proposed to the government */
+function endRound() {
+  const ranked = rankedIssues();
+  const winner = ranked[0];
+  if (winner && totalVotes(winner.id) > 0) {
+    proposals.unshift({
+      id: winner.id, votes: totalVotes(winner.id), total: cycleTotal(),
+      round: round.num, date: Date.now(),
+    });
+    proposals = proposals.slice(0, 50);
+    save(LS.proposals, proposals);
+    toast(`🏛️ Cycle #${round.num} closed — “${winner.en}” proposed to the government.`);
+  }
+  // open a fresh cycle
+  round = { num: round.num + 1, start: Date.now(), lengthMs: round.lengthMs };
+  tally = {}; mine = new Set(); voteLog = [];
+  save(LS.round, round); save(LS.votes, tally); save(LS.mine, []); save(LS.log, voteLog);
+  renderRoundMeta(); renderIssues(); renderLeaderboard(); renderStats(); renderProposals(); renderTopRoute();
+}
+
+function setCycleLength(ms) {
+  round = { num: round.num, start: Date.now(), lengthMs: ms };
+  save(LS.round, round);
+  renderRoundMeta(); tickRound();
+  toast(`🗳️ Cycle length set to ${CYCLES[ms] || 'custom'} — timer reset.`);
+}
+
+/* Static parts of the round banner (number, cycle selector, peak-time chip) */
+function renderRoundMeta() {
+  if ($('#rbNum')) $('#rbNum').textContent = '#' + round.num;
+  if ($('#cycleSelect')) $('#cycleSelect').value = String(round.lengthMs);
+  renderTypicalTime();
+}
+
+/* "The time period they use to vote typically" — peak voting hour, all-time */
+function renderTypicalTime() {
+  const chip = $('#typicalTime');
+  if (!chip) return;
+  const cast = hist.reduce((a, b) => a + b, 0);
+  if (cast < 3) { chip.textContent = '🕒 Peak voting time: gathering data'; return; }
+  let best = 0;
+  hist.forEach((c, h) => { if (c > hist[best]) best = h; });
+  const a = String(best).padStart(2, '0');
+  const b = String((best + 1) % 24).padStart(2, '0');
+  chip.textContent = `🕒 Peak voting time: ${a}:00–${b}:00`;
+}
+
+function renderProposals() {
+  const box = $('#proposalsList');
+  if (!box) return;
+  if (!proposals.length) {
+    box.innerHTML = `<li class="proposal-empty">No cycle has closed yet. When this voting cycle's countdown reaches zero, the people's #1 priority is automatically proposed to the government and recorded here with the date.</li>`;
+    return;
+  }
+  box.innerHTML = proposals.map(p => {
+    const i = ISSUES.find(x => x.id === p.id) || { icon: '•', en: p.id, ar: '' };
+    const m = MINISTRIES[ISSUE_GOV[p.id]];
+    const d = new Date(p.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    const share = p.total ? Math.round((p.votes / p.total) * 100) : 0;
+    return `<li class="proposal-item">
+      <span class="pr-icon">${i.icon}</span>
+      <div class="pr-body">
+        <strong>${i.en}</strong> <small>${i.ar}</small>
+        <div class="pr-meta">Cycle #${p.round} · ${d} · ${p.votes.toLocaleString()} votes (${share}%)${m ? ' · → ' + m.en : ''}</div>
+      </div>
+      <span class="pr-badge">Proposed ✓</span>
+    </li>`;
+  }).join('');
 }
 
 /* ---------- 8b. Government contacts (national → wilaya → commune) ---------- */
@@ -308,6 +427,11 @@ function renderEmergency() {
 
 function renderTopRoute() {
   const box = $('#topRoute');
+  if (cycleTotal() === 0) {
+    box.innerHTML = `<span class="tr-icon">🗳️</span>
+      <div><strong>No votes yet this cycle.</strong> Be the first — the leading issue when the countdown ends is the one proposed to the government.</div>`;
+    return;
+  }
   const top = rankedIssues()[0];
   const m = MINISTRIES[ISSUE_GOV[top.id]];
   const myTop = mine.size ? rankedIssues().find(i => mine.has(i.id)) : null;
@@ -432,8 +556,9 @@ function checkGeo() {
 /* ---------- 10. Mandate report ---------- */
 function buildReport() {
   const ranked = rankedIssues();
-  const totVotes = ISSUES.reduce((s, i) => s + totalVotes(i.id), 0);
+  const totVotes = cycleTotal();
   const date = new Date().toLocaleString('en-GB', { dateStyle: 'long', timeStyle: 'short' });
+  const ends = new Date(round.start + round.lengthMs).toLocaleString('en-GB', { dateStyle: 'long', timeStyle: 'short' });
   const loc = verify
     ? (verify.status === 'verified' ? 'GPS-verified inside Algeria' : `self-declared: ${verify.label}`)
     : 'not verified';
@@ -443,15 +568,16 @@ function buildReport() {
   lines.push('Aṣliḥ Bladi · Fix My Country');
   lines.push('='.repeat(52));
   lines.push(`Generated: ${date}`);
+  lines.push(`Voting cycle: #${round.num} (${CYCLES[round.lengthMs] || 'custom'}) — closes ${ends}`);
   lines.push(`Submitted by: a citizen (${loc})`);
   lines.push(`Issues backed by this citizen: ${mine.size}`);
-  lines.push(`Total recorded votes: ${totVotes.toLocaleString()}`);
+  lines.push(`Total votes this cycle: ${totVotes.toLocaleString()}`);
   lines.push('');
   lines.push('THE PEOPLE ASK THE GOVERNMENT TO FIX, IN ORDER:');
   lines.push('-'.repeat(52));
   ranked.forEach((i, idx) => {
     const v = totalVotes(i.id);
-    const share = ((v / totVotes) * 100).toFixed(1);
+    const share = totVotes ? ((v / totVotes) * 100).toFixed(1) : '0.0';
     const mark = mine.has(i.id) ? ' ★' : '';
     lines.push(`${String(idx + 1).padStart(2, ' ')}. ${i.en} (${i.ar})${mark}`);
     lines.push(`    ${v.toLocaleString()} votes · ${share}% of the vote · category: ${i.cat}`);
@@ -473,6 +599,16 @@ function buildReport() {
     lines.push(`LOCAL LEVEL — escalate in your area:`);
     lines.push(`   • Wilaya of ${wil} (Wali / APW) — provincial services`);
     lines.push(`   • Your commune (APC / town hall) — first stop for local issues`);
+    lines.push('');
+  }
+  if (proposals.length) {
+    lines.push('ALREADY PROPOSED IN PAST CYCLES:');
+    lines.push('-'.repeat(52));
+    proposals.forEach(p => {
+      const it = ISSUES.find(x => x.id === p.id);
+      const d = new Date(p.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+      lines.push(`   • Cycle #${p.round} (${d}): ${it ? it.en : p.id} — ${p.votes.toLocaleString()} votes`);
+    });
     lines.push('');
   }
   lines.push('Public-service failure? File a complaint with the');
@@ -517,12 +653,24 @@ function init() {
     cf.appendChild(o);
   });
 
+  // voting cycle
+  ensureRound();
+
   // initial paint
   reflectVerification();
   renderIssues();
   renderLeaderboard();
   renderStats();
   renderContacts();
+  renderRoundMeta();
+  renderProposals();
+
+  // live countdown — updates every second, closes the cycle at zero
+  tickRound();
+  setInterval(tickRound, 1000);
+
+  const cycleSel = $('#cycleSelect');
+  if (cycleSel) cycleSel.addEventListener('change', () => setCycleLength(Number(cycleSel.value)));
 
   lsel.addEventListener('change', renderLocalContacts);
 
@@ -555,11 +703,12 @@ function init() {
   // mandate
   $('#submitBtn').addEventListener('click', openModal);
   $('#resetBtn').addEventListener('click', () => {
-    if (!confirm('Remove all the votes you cast on this device?')) return;
-    mine.forEach(id => { tally[id] = (tally[id] || 0) - 1; });
+    if (!confirm('Remove all the votes you cast this cycle on this device?')) return;
+    mine.forEach(id => { tally[id] = Math.max(0, (tally[id] || 0) - 1); });
     mine.clear();
-    save(LS.mine, []); save(LS.tally, tally);
-    renderIssues(); renderLeaderboard(); renderStats();
+    voteLog = voteLog.filter(() => false);
+    save(LS.mine, []); save(LS.votes, tally); save(LS.log, voteLog);
+    renderIssues(); renderLeaderboard(); renderStats(); renderTopRoute(); renderTypicalTime();
     toast('Your votes were cleared.');
   });
 
